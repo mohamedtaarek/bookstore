@@ -1,0 +1,20 @@
+{
+  "development": {
+    "username": "dicom_user",
+    "password": "dicom_password",
+    "database": "bookstore",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "dicom_user",
+    "password": "dicom_password",
+    "database": "bookstore",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
+  }
+}

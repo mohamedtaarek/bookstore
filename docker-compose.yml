@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  bookstor:
+    image: bookstore_backend
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgres://root:secret@db:5432/bookstore
+      - PORT=3000
+      - NODE_ENV=production
+    restart: always
+
+
+  db:
+    image: postgres:14.1-alpine
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DATABASE=bookstore
+    restart: always
+    privileged: true
+
+networks:
+  default:
+     external:
+        name: bookstore

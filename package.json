@@ -1,0 +1,37 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "book-store backend coding challenge",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js/ --exec \"node --require dotenv/config --require babel-register\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedtaarek/bookstore.git"
+  },
+  "keywords": [
+    "book",
+    "store"
+  ],
+  "author": "Mohamed Tarek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedtaarek/bookstore/issues"
+  },
+  "homepage": "https://github.com/mohamedtaarek/bookstore#readme",
+  "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.41",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
+}
